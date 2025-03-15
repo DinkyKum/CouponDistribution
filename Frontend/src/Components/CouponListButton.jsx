@@ -10,7 +10,7 @@ const CouponListButton = () => {
   const fetchCoupons = async () => {
     if (!showCoupons) {
       try {
-        const response = await axios.get(BASE_URL + "/view/coupons"); // Adjust API URL
+        const response = await axios.get(BASE_URL + "/view/coupons"); 
         setCoupons(response.data);
         setShowCoupons(true);
       } catch (error) {
@@ -23,7 +23,7 @@ const CouponListButton = () => {
 
   return (
     <div className="text-white text-center">
-      {/* Toggle Button */}
+
       <button 
         onClick={fetchCoupons}
         className="bg-gray-800 hover:bg-gray-700 text-white font-bold  text-lg py-4 px-4 rounded transition-all"
@@ -31,7 +31,7 @@ const CouponListButton = () => {
         {showCoupons ? "Hide Coupons" : "View Coupons"}
       </button>
 
-      {/* Coupon Cards */}
+
       {showCoupons && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-6">
           {coupons.length > 0 ? (

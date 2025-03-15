@@ -7,10 +7,8 @@ const Home = () => {
       <h1 className="text-3xl font-bold mt-16 mb-6">Coupon System</h1>
       
       <div className="grid grid-cols-2 w-full max-w-3xl gap-6">
-
-        <CouponListButton />
-        <ClaimCouponButton />
-   
+        <CouponListButton/>
+        <ClaimCouponButton/>
       </div>
     </div>
   );
