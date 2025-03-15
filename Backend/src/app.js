@@ -13,7 +13,7 @@ const port = process.env.PORT || 3001;
 const isVercel = !!process.env.VERCEL; // Detect if running on Vercel
 app.use(cookieParser());
 
-const allowedOrigins = ["http://localhost:5174", "https://farmxpress.vercel.app"];
+const allowedOrigins = ["http://localhost:5174", "https://coupon-distribution-tau.vercel.app"];
 
 app.use(
   cors({
