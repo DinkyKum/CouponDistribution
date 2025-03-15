@@ -6,7 +6,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
 const couponRouter = require("./routes/coupon");
-
+const claimRouter= require('./routes/claim');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -42,6 +42,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/", couponRouter);
+app.use("/", claimRouter);
 
 if (isVercel) {
   module.exports = async (req, res) => {
